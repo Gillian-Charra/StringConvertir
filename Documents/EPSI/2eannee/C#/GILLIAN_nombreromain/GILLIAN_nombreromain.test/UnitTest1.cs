@@ -46,10 +46,13 @@ namespace GILLIAN_nombreromain.test
         [InlineData(11)]
         [InlineData(12)]
         [InlineData(13)]
-        public void TestUnites10a13(int n)
+        [InlineData(20)]
+        public void TestUnites10a13et20(int n)
         {
+            int DizaineArabe = Int32.Parse(n.ToString()[n.ToString().Length - 2].ToString());
+            int UniteArabe = Int32.Parse(n.ToString()[n.ToString().Length - 1].ToString());
             var resultat = ConvertisseurNombresRomains.Convertir(n);
-            var attendu = "X"+new string('I', n-10);
+            var attendu = new string('X', DizaineArabe) + new string('I', UniteArabe);
             Assert.Equal(attendu, resultat);
         }
         [Fact]
@@ -64,12 +67,21 @@ namespace GILLIAN_nombreromain.test
         [InlineData(15)]
         [InlineData(16)]
         [InlineData(17)]
+        [InlineData(18)]
 
         public void TestUnites15a18(int n)
         {
             var resultat = ConvertisseurNombresRomains.Convertir(n);
             var attend = "XV" + new string('I', n - 15);
             Assert.Equal(attend, resultat);
+        }
+        [Fact]
+        public void TestUnites19()
+        {
+            const int n = 19;
+            var resultat = ConvertisseurNombresRomains.Convertir(n);
+            var attendu = "XIX";
+            Assert.Equal(attendu, resultat);
         }
     }
 }
