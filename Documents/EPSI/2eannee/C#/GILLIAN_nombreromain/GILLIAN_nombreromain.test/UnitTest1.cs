@@ -48,6 +48,7 @@ namespace GILLIAN_nombreromain.test
         [InlineData(13)]
         [InlineData(20)]
         [InlineData(21)]
+        [InlineData(22)]
 
 
 
