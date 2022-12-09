@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GILLIAN_nombreromain", "GILLIAN_nombreromain\GILLIAN_nombreromain.csproj", "{8CFBD5DD-5945-4036-9243-3A48F586A636}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GILLIAN_nombreromain.test", "GILLIAN_nombreromain.test\GILLIAN_nombreromain.test.csproj", "{A3EAF5E2-1048-4E14-968F-796427ED7D04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CFBD5DD-5945-4036-9243-3A48F586A636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CFBD5DD-5945-4036-9243-3A48F586A636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CFBD5DD-5945-4036-9243-3A48F586A636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CFBD5DD-5945-4036-9243-3A48F586A636}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3EAF5E2-1048-4E14-968F-796427ED7D04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3EAF5E2-1048-4E14-968F-796427ED7D04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3EAF5E2-1048-4E14-968F-796427ED7D04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3EAF5E2-1048-4E14-968F-796427ED7D04}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35010EC0-185F-43D9-A864-9BABABA503AE}
+	EndGlobalSection
+EndGlobal
