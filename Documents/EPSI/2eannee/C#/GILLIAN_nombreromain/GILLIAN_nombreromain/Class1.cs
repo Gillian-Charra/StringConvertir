@@ -18,6 +18,9 @@
                     case <=8:
                         nombreRomain = 'V'+new string('I',nombreArabe-5);
                         break;
+                    case 9:
+                        nombreRomain = new string("IX");
+                        break;
                 };
             }
 

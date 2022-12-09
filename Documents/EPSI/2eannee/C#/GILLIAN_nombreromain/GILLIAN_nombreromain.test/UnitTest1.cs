@@ -32,5 +32,13 @@ namespace GILLIAN_nombreromain.test
             var attend = "V" + new string('I', n - 5);
             Assert.Equal(attend, resultat);
         }
+        [Fact]
+        public void TestUnites9()
+        {
+            const int n = 9;
+            var resultat = ConvertisseurNombresRomains.Convertir(n);
+            var attendu = "IX";
+            Assert.Equal(attendu, resultat);
+        }
     }
 }
