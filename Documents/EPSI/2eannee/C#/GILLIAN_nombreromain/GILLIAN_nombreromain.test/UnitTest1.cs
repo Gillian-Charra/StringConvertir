@@ -46,10 +46,18 @@ namespace GILLIAN_nombreromain.test
         [InlineData(11)]
         [InlineData(12)]
         [InlineData(13)]
-        public void TestUnites10(int n)
+        public void TestUnites10a13(int n)
         {
             var resultat = ConvertisseurNombresRomains.Convertir(n);
             var attendu = "X"+new string('I', n-10);
+            Assert.Equal(attendu, resultat);
+        }
+        [Fact]
+        public void TestUnites14()
+        {
+            const int n = 14;
+            var resultat = ConvertisseurNombresRomains.Convertir(n);
+            var attendu = "XIV";
             Assert.Equal(attendu, resultat);
         }
     }
