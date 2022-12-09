@@ -2,14 +2,14 @@ namespace GILLIAN_nombreromain.test
 {
     public class NombresRomainsTest
     {
-        [Fact]
-        public void Test1()
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        public void TestUnites1a2(int n)
         {
-            const int nombreArabe = 1;
-
-            var resultat=ConvertisseurNombresRomains.Convertir(nombreArabe);
-
-            Assert.Equal("I",resultat);
+            var resultat = ConvertisseurNombresRomains.Convertir(n);
+            var attendu = new string('I', n);
+            Assert.Equal(attendu, resultat);
         }
     }
 }
