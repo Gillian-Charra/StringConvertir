@@ -24,6 +24,7 @@ namespace GILLIAN_nombreromain.test
         [InlineData(5)]
         [InlineData(6)]
         [InlineData(7)]
+
         public void TestUnites5a7(int n)
         {
             var resultat = ConvertisseurNombresRomains.Convertir(n);
