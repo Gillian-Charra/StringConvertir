@@ -3,6 +3,7 @@ namespace GILLIAN_nombreromain.test
     public class NombresRomainsTest
     {
         [Theory]
+        [InlineData(0)]
         [InlineData(1)]
         [InlineData(2)]
         [InlineData(3)]
@@ -38,6 +39,14 @@ namespace GILLIAN_nombreromain.test
             const int n = 9;
             var resultat = ConvertisseurNombresRomains.Convertir(n);
             var attendu = "IX";
+            Assert.Equal(attendu, resultat);
+        }
+        [Theory]
+        [InlineData(10)]
+        public void TestUnites10(int n)
+        {
+            var resultat = ConvertisseurNombresRomains.Convertir(n);
+            var attendu = "X"+new string('I', n-10);
             Assert.Equal(attendu, resultat);
         }
     }
