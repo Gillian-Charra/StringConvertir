@@ -9,7 +9,7 @@
             if (nombreArabe.ToString().Length == 1)
             {
                  switch (nombreArabe) {
-                    case  <= 2:
+                    case  <= 3:
                         nombreRomain = new string('I', nombreArabe);
                         break;
                 };
