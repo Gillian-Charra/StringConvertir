@@ -12,5 +12,13 @@ namespace GILLIAN_nombreromain.test
             var attendu = new string('I', n);
             Assert.Equal(attendu, resultat);
         }
+        [Fact]
+        public void TestUnites4()
+        {
+            const int n = 4;
+            var resultat = ConvertisseurNombresRomains.Convertir(n);
+            var attendu = "IV";
+            Assert.Equal(attendu, resultat);
+        }
     }
 }
