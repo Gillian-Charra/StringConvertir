@@ -2,61 +2,39 @@
 {
     public class ConvertisseurNombresRomains
     {
+        public static char[,] SIGNES =
+        {
+            {'I','V'},
+            {'X','L'}
+        };
         public static string Convertir(int nombreArabe)
         {
-            string UniteRomain = "";
-            string DizaineRomain = "";
-
-            if (nombreArabe.ToString().Length >= 1)
+            string nombreRomain = "";
+            string chiffreRomain = "";
+            for (int i = 0; i < nombreArabe.ToString().Length; i++)
             {
-                int UniteArabe= Int32.Parse(nombreArabe.ToString()[nombreArabe.ToString().Length-1].ToString());
-
-                
-                 switch (UniteArabe) {
-                     case  0:
-                        UniteRomain = "";
-                        break;
-                     case <= 3:
-                         UniteRomain = new string('I', UniteArabe);
-                         break;
-                    case 4:
-                        UniteRomain = new string("IV");
-                        break;
-                    case <=8:
-                        UniteRomain = 'V'+new string('I', UniteArabe - 5);
-                        break;
-                    case 9:
-                        UniteRomain = new string("IX");
-                        break;
-
-                };
-            }
-            if (nombreArabe.ToString().Length >= 2)
-            {
-                int DizaineArabe = Int32.Parse(nombreArabe.ToString()[nombreArabe.ToString().Length - 2].ToString());
-
-
-                switch (DizaineArabe)
+                int chiffreSelectionne = Int32.Parse(nombreArabe.ToString()[nombreArabe.ToString().Length-i-1].ToString());
+                switch (chiffreSelectionne)
                 {
                     case 0:
-                        DizaineRomain = "";
+                        chiffreRomain = "";
                         break;
                     case <= 3:
-                        DizaineRomain = new string('X', DizaineArabe);
+                        chiffreRomain = new string(SIGNES[i, 0], chiffreSelectionne);
                         break;
                     case 4:
-                        DizaineRomain = new string("XL");
+                        chiffreRomain = new string(SIGNES[i, 0].ToString() + SIGNES[i, 1]);
                         break;
                     case <= 8:
-                        DizaineRomain = 'L' + new string('X', DizaineArabe - 5);
+                        chiffreRomain = SIGNES[i, 1] + new string(SIGNES[i, 0], chiffreSelectionne - 5);
                         break;
                     case 9:
-                        DizaineRomain = new string("XC");
+                        chiffreRomain = new string(SIGNES[i, 0].ToString() + SIGNES[i + 1, 0]);
                         break;
                 };
+                nombreRomain =chiffreRomain+ nombreRomain;
             }
-            
-            return DizaineRomain+UniteRomain;
+            return nombreRomain;
         }
     }
 }

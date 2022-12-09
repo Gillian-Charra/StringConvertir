@@ -16,34 +16,9 @@ namespace GILLIAN_nombreromain.test
         [InlineData(22)]
         [InlineData(23)]
         [InlineData(30)]
-        public void TestUnites0a3puis10a13et20a23(int n)
-        {
-            int DizaineArabe = 0;
-            if (n.ToString().Length >= 2)
-            {
-                DizaineArabe = Int32.Parse(n.ToString()[n.ToString().Length - 2].ToString());
-            }
-            int UniteArabe = Int32.Parse(n.ToString()[n.ToString().Length - 1].ToString());
-            var resultat = ConvertisseurNombresRomains.Convertir(n);
-            var attendu = new string('X', DizaineArabe) + new string('I', UniteArabe);
-            Assert.Equal(attendu, resultat);
-        }
-        [Theory]
         [InlineData(4)]
         [InlineData(14)]
         [InlineData(24)]
-        public void TestUnites4puis14et24(int n)
-        {
-            int DizaineArabe = 0;
-            if (n.ToString().Length >= 2)
-            {
-                DizaineArabe = Int32.Parse(n.ToString()[n.ToString().Length - 2].ToString());
-            }
-            var resultat = ConvertisseurNombresRomains.Convertir(n);
-            var attendu = new string('X', DizaineArabe)+"IV";
-            Assert.Equal(attendu, resultat);
-        }
-        [Theory]
         [InlineData(5)]
         [InlineData(6)]
         [InlineData(7)]
@@ -56,7 +31,10 @@ namespace GILLIAN_nombreromain.test
         [InlineData(26)]
         [InlineData(27)]
         [InlineData(28)]
-        public void TestUnites15a18(int n)
+        [InlineData(9)]
+        [InlineData(19)]
+        [InlineData(29)]
+        public void TestUnites0a3puis10a13et20a23(int n)
         {
             int DizaineArabe = 0;
             if (n.ToString().Length >= 2)
@@ -65,22 +43,23 @@ namespace GILLIAN_nombreromain.test
             }
             int UniteArabe = Int32.Parse(n.ToString()[n.ToString().Length - 1].ToString());
             var resultat = ConvertisseurNombresRomains.Convertir(n);
-            var attend = new string('X', DizaineArabe)+"V" + new string('I', UniteArabe - 5);
-            Assert.Equal(attend, resultat);
-        }
-        [Theory]
-        [InlineData(9)]
-        [InlineData(19)]
-        [InlineData(29)]
-        public void TestUnites19(int n)
-        {
-            int DizaineArabe = 0;
-            if (n.ToString().Length >= 2)
+            var attendu = new string('X', DizaineArabe);
+            switch (UniteArabe)
             {
-                DizaineArabe = Int32.Parse(n.ToString()[n.ToString().Length - 2].ToString());
+                case <=3:
+                    attendu+=new string('I', UniteArabe);
+                    break;
+                case 4:
+                    attendu += "IV";
+                    break;
+                case <= 8:
+                    attendu += "V" + new string('I', UniteArabe - 5);
+                    break;
+                case 9:
+                    attendu += "IX";
+                    break;
             }
-            var resultat = ConvertisseurNombresRomains.Convertir(n);
-            var attendu =  new string('X', DizaineArabe)+"IX";
+
             Assert.Equal(attendu, resultat);
         }
     }
