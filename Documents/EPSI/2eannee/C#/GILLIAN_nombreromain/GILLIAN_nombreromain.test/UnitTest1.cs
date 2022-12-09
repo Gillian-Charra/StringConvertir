@@ -44,7 +44,8 @@ namespace GILLIAN_nombreromain.test
         [Theory]
         [InlineData(10)]
         [InlineData(11)]
-        [InlineData(12)]    
+        [InlineData(12)]
+        [InlineData(13)]
         public void TestUnites10(int n)
         {
             var resultat = ConvertisseurNombresRomains.Convertir(n);
