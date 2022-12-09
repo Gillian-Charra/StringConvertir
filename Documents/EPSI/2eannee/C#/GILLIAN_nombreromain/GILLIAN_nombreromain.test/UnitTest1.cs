@@ -53,6 +53,7 @@ namespace GILLIAN_nombreromain.test
         [InlineData(18)]
         [InlineData(25)]
         [InlineData(26)]
+        [InlineData(27)]
 
         public void TestUnites15a18(int n)
         {
