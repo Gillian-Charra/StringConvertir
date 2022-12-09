@@ -60,5 +60,14 @@ namespace GILLIAN_nombreromain.test
             var attendu = "XIV";
             Assert.Equal(attendu, resultat);
         }
+        [Theory]
+        [InlineData(15)]
+
+        public void TestUnites15a18(int n)
+        {
+            var resultat = ConvertisseurNombresRomains.Convertir(n);
+            var attend = "XV" + new string('I', n - 15);
+            Assert.Equal(attend, resultat);
+        }
     }
 }
