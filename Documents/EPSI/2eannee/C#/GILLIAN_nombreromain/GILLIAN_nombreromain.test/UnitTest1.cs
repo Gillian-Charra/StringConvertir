@@ -70,6 +70,7 @@ namespace GILLIAN_nombreromain.test
         [Theory]
         [InlineData(9)]
         [InlineData(19)]
+        [InlineData(29)]
         public void TestUnites19(int n)
         {
             int DizaineArabe = 0;
