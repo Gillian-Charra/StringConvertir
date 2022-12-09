@@ -53,7 +53,7 @@ namespace GILLIAN_nombreromain.test
 
 
 
-        public void TestUnites10a13et20a21(int n)
+        public void TestUnites10a13et20a23(int n)
         {
             int DizaineArabe = Int32.Parse(n.ToString()[n.ToString().Length - 2].ToString());
             int UniteArabe = Int32.Parse(n.ToString()[n.ToString().Length - 1].ToString());
