@@ -15,6 +15,7 @@ namespace GILLIAN_nombreromain.test
         [InlineData(21)]
         [InlineData(22)]
         [InlineData(23)]
+        [InlineData(30)]
         public void TestUnites0a3puis10a13et20a23(int n)
         {
             int DizaineArabe = 0;
